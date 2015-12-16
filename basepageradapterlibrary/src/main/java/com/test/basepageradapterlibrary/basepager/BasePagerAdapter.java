@@ -36,7 +36,7 @@ public abstract class BasePagerAdapter<T> extends PagerAdapter {
         View view = LayoutInflater.from(container.getContext())
                 .inflate(layoutResIds.get(position % layoutResIds.size()), container, false);
 
-        convert(view, getItem(position));
+        convert(view, getItem(position),position);
         container.addView(view);
         return view;
     }
@@ -72,11 +72,10 @@ public abstract class BasePagerAdapter<T> extends PagerAdapter {
     }
 
     /**
-     *
      * @param view
      * @param item
      */
-    protected abstract void convert(View view, T item);
+    protected abstract void convert(View view, T item, int position);
 
 
     public void addAll(List<T> data) {

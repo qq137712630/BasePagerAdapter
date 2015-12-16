@@ -69,20 +69,19 @@ public class DemoBasicActivity extends AppCompatActivity {
         BasePagerAdapter baseAdapter = new BasePagerAdapter<ColorItem>(items, strs, layouts) {
 
             @Override
-            protected void convert(View view, ColorItem item) {
+            protected void convert(View view, ColorItem item, int position) {
 
                 TextView textView = (TextView) view.findViewById(R.id.title);
                 textView.setText("Page: " + item.hex);
             }
         };
 
-        QuickPagerAdapter mQuickPagerAdapter= new QuickPagerAdapter<ColorItem>(items,strs,layouts)
-        {
+        QuickPagerAdapter mQuickPagerAdapter = new QuickPagerAdapter<ColorItem>(items, strs, layouts) {
 
             @Override
-            protected void convert(BasePagerAdapterHelper helper, ColorItem item) {
+            protected void convert(BasePagerAdapterHelper helper, ColorItem item, int position) {
 
-                TextView textView =  helper.getTextView(R.id.title);
+                TextView textView = helper.getTextView(R.id.title);
                 textView.setText("Page: " + item.hex);
             }
         };

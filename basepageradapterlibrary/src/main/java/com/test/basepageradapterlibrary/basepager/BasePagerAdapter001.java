@@ -38,7 +38,7 @@ public abstract class BasePagerAdapter001<T, H extends BasePagerAdapterHelper> e
 
         BasePagerAdapterHelper vh = new BasePagerAdapterHelper(view);
 
-        convert((H) vh, getItem(position));
+        convert((H) vh, getItem(position),position);
 
         container.addView(view);
         return view;
@@ -80,7 +80,7 @@ public abstract class BasePagerAdapter001<T, H extends BasePagerAdapterHelper> e
      * @param helper A fully initialized helper.
      * @param item   The item that needs to be displayed.
      */
-    protected abstract void convert(H helper, T item);
+    protected abstract void convert(H helper, T item,int position);
 
 
     public void addAll(List<T> data) {
