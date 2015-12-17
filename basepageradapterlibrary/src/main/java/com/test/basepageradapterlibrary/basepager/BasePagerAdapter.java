@@ -80,5 +80,6 @@ public abstract class BasePagerAdapter<T> extends PagerAdapter {
 
     public void addAll(List<T> data) {
         this.data = new ArrayList<>(data);
+        notifyDataSetChanged();
     }
 }
