@@ -5,12 +5,7 @@ package com.nshmura.recyclertablayout.demo;
  */
 public enum Demo {
 
-    BASIC(R.string.title_basic),
-    CUSTOM_VIEW01(R.string.title_custom_view01),
-    CUSTOM_VIEW02(R.string.title_custom_view02),
-    IMITATION_LOOP(R.string.title_imitation_loop),
-    YEARS(R.string.title_years),
-    AUTO_SELECT(R.string.title_auto_select);
+    BASIC(R.string.title_basic);
 
     public int titleResId;
 

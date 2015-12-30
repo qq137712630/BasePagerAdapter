@@ -1,12 +1,5 @@
 package com.nshmura.recyclertablayout.demo;
 
-import com.nshmura.recyclertablayout.demo.autoselect.DemoAutoSelectActivity;
-import com.nshmura.recyclertablayout.demo.basic.DemoBasicActivity;
-import com.nshmura.recyclertablayout.demo.customview01.DemoCustomView01Activity;
-import com.nshmura.recyclertablayout.demo.customview02.DemoCustomView02Activity;
-import com.nshmura.recyclertablayout.demo.imitationloop.DemoImitationLoopActivity;
-import com.nshmura.recyclertablayout.demo.years.DemoYearsActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,6 +10,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.nshmura.recyclertablayout.demo.basic.DemoBasicActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -63,24 +58,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 DemoBasicActivity.startActivity(this, demo);
                 break;
 
-            case AUTO_SELECT:
-                DemoAutoSelectActivity.startActivity(this, demo);
-                break;
 
-            case CUSTOM_VIEW01:
-                DemoCustomView01Activity.startActivity(this, demo);
-                break;
-
-            case CUSTOM_VIEW02:
-                DemoCustomView02Activity.startActivity(this, demo);
-                break;
-
-            case YEARS:
-                DemoYearsActivity.startActivity(this, demo);
-                break;
-
-            case IMITATION_LOOP:
-                DemoImitationLoopActivity.startActivity(this, demo);
         }
     }
 
